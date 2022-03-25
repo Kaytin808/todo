@@ -19,6 +19,11 @@ body {
     color: white;
     font-family: poppins;
 }
+.sideBar-container {
+    height: 50rem;
+    width: 30rem;
+    background-color: #C84630;
+}
 @font-face {
     font-family: 'poppins';
     src: url('./Poppins-Light.ttf');
