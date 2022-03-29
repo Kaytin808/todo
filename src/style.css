@@ -65,14 +65,15 @@ body {
     height: fit-content;
     text-align: center;
 }
+.inbox:hover {
+    background-color: #6e6e6e;
+    border-radius: 10px;
+    cursor: pointer;
+}
 .middle-container {
     height: 51rem;
     width: 99rem;
     background-color: #2d2d2d;
-}
-.inbox:hover {
-    background-color: #6e6e6e;
-    border-radius: 10px;
 }
 .add-task {
     font-size: 25px;
@@ -86,6 +87,10 @@ body {
 }
 .add span {
     padding: 15px;
+}
+.add:hover {
+    color: grey;
+    cursor: pointer;
 }
 @font-face {
     font-family: 'poppins';
