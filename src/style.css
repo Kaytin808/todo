@@ -22,6 +22,31 @@ body {
 .container {
     display: flex;
 }
+#myForm {
+    position: relative;
+    left: 396px;
+    top: -546px;
+    display: none;
+}
+#task {
+    background-color: #202020;
+    color: white;
+    outline: none;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    font-family: poppins;
+    font-size: 17px;
+}
+.submit-btn {
+    font-size: 30px;
+    border: medium none;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    border-radius: 22px;
+    position: relative;
+    top: 4px;
+    left: 5px;
+}
 .sideBar-container {
     height: 51rem;
     width: 21rem;
@@ -56,7 +81,6 @@ body {
 }
 .task-container {
     display: flex;
-    height: inherit;
     margin-left: 60px;
     margin-top: 18px;
 }

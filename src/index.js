@@ -1,3 +1,4 @@
+
 import './style.css'
 
 
@@ -27,6 +28,10 @@ header.classList.add('header')
 headerTitle.textContent = 'To-Do List ✅'
 inboxP.textContent = 'Inbox'
 
+addTask.addEventListener('click', ()=> {
+    var form = document.getElementById('myForm') 
+    form.style.display = 'block'
+})
 
 main.append(header)
 main.append(container)
