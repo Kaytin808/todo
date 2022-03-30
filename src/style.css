@@ -71,16 +71,26 @@ ul {
     gap: 40px;
     width: 32rem;
     grid-template-columns: repeat(2,1fr);
+    font-family: poppins;
 }
 .list-border {
     border: solid grey 1px;
     border-radius: 10px;
     cursor: pointer;
+    background-color: #202020;
 }
 .delete-task {
     float: right;
     font-size: 20px;
     margin-right: 4px;
+}
+.delete-task1 {
+    position: relative;
+    left: 250px;
+    top: -7px;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
 }
 .submit-btn {
     font-size: 30px;

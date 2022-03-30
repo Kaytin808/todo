@@ -27,6 +27,7 @@ function addThis() {
     x.addEventListener('click', () => {
         div.remove();
     })
+    document.forms[0].reset();
     ul.appendChild(div)
     div.append(x)
     div.appendChild(h3)

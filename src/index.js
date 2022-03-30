@@ -20,6 +20,9 @@ var main = document.getElementById('main')
 var listContainer = document.createElement('div')
 listContainer.classList.add('list-container')
 var ul = document.createElement('ul')
+var taskX = document.querySelector('.delete-task1')
+
+
 ul.classList.add('ul-list')
 spanAdd.classList.add('add')
 spanAdd.textContent = '+'
@@ -39,6 +42,10 @@ inboxP.textContent = 'Inbox'
 addTask.addEventListener('click', ()=> {
     var form = document.getElementById('myForm') 
     form.style.display = 'flex'
+})
+taskX.addEventListener('click' , () => {
+    var form = document.getElementById('myForm')
+    form.style.display = 'none'
 })
 
 main.append(header)
