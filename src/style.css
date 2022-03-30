@@ -60,9 +60,17 @@ body {
     right: 35em;
     color: white;
     font-family: sans;
-}
+    margin-top: 25px;
+  }
 ul {
     list-style-type: none;
+}
+.ul-list {
+    flex-direction: column;
+    display: grid;
+    gap: 40px;
+    width: 32rem;
+    grid-template-columns: repeat(2,1fr);
 }
 .submit-btn {
     font-size: 30px;
