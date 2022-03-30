@@ -102,7 +102,7 @@ ul {
     left: 5px;
 }
 .sideBar-container {
-    height: 54rem;
+    height: 56rem;
     width: 21rem;
     background-color: #565656;
     justify-content: center;
@@ -125,7 +125,7 @@ ul {
     cursor: pointer;
 }
 .middle-container {
-    height: 54rem;
+    height: 56rem;
     width: 99rem;
     background-color: #2d2d2d;
 }
