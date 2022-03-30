@@ -72,6 +72,16 @@ ul {
     width: 32rem;
     grid-template-columns: repeat(2,1fr);
 }
+.list-border {
+    border: solid grey 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.delete-task {
+    float: right;
+    font-size: 20px;
+    margin-right: 4px;
+}
 .submit-btn {
     font-size: 30px;
     border: medium none;
