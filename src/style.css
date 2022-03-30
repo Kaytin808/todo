@@ -32,7 +32,7 @@ body {
     background-color: #202020;
     border-radius: 12px;
     padding: 13px;
-    /* display: none; */
+    display: none;
 }
 #task, #description {
     background-color: #202020;
@@ -53,6 +53,17 @@ body {
     margin-left: 10px;
     margin-top: 8px;
 }
+.list-container {
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    right: 35em;
+    color: white;
+    font-family: sans;
+}
+ul {
+    list-style-type: none;
+}
 .submit-btn {
     font-size: 30px;
     border: medium none;
@@ -63,7 +74,7 @@ body {
     left: 5px;
 }
 .sideBar-container {
-    height: 51rem;
+    height: 54rem;
     width: 21rem;
     background-color: #565656;
     justify-content: center;
@@ -86,7 +97,7 @@ body {
     cursor: pointer;
 }
 .middle-container {
-    height: 51rem;
+    height: 54rem;
     width: 99rem;
     background-color: #2d2d2d;
 }

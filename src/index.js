@@ -1,4 +1,3 @@
-
 import './style.css'
 
 
@@ -13,6 +12,12 @@ var inbox = document.createElement('div')
 var inboxP = document.createElement('p')
 var addTask = document.createElement('div')
 var spanAdd = document.createElement('div')
+var main = document.getElementById('main')
+var listContainer = document.createElement('div')
+listContainer.classList.add('list-container')
+var ul = document.createElement('ul')
+var li = document.createElement('li')
+li.textContent = 'The Odin Project'
 spanAdd.classList.add('add')
 spanAdd.textContent = '+'
 var addTaskP = document.createElement('span')
@@ -30,16 +35,19 @@ inboxP.textContent = 'Inbox'
 
 addTask.addEventListener('click', ()=> {
     var form = document.getElementById('myForm') 
-    form.style.display = 'block'
+    form.style.display = 'flex'
 })
 
 main.append(header)
 main.append(container)
+listContainer.appendChild(ul)
+ul.appendChild(li)
 container.append(sideBar)
 sideBar.appendChild(inbox)
 inbox.appendChild(inboxP)
 container.append(middleBar)
 middleBar.appendChild(taskContainer)
+middleBar.append(listContainer)
 taskContainer.appendChild(addTask)
 addTask.appendChild(spanAdd)
 spanAdd.appendChild(addTaskP)
