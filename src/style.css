@@ -105,8 +105,8 @@ ul {
     height: 56rem;
     width: 21rem;
     background-color: #565656;
-    justify-content: center;
     display: flex;
+    flex-direction: column;
 }
 .sideBar-container p {
     font-size: 30px;
@@ -114,12 +114,12 @@ ul {
     color: white;
     padding: 10px;
 }
-.inbox {
+.inbox, .today, .project {
     width: inherit;
     height: fit-content;
     text-align: center;
 }
-.inbox:hover {
+.inbox:hover, .today:hover, .project:hover {
     background-color: #6e6e6e;
     border-radius: 10px;
     cursor: pointer;
