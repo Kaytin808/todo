@@ -1,7 +1,5 @@
+// import addList from './addList';
 import './style.css'
-import addList from './addList'
-
-
 
 var main = document.getElementById('main')
 var header = document.createElement('div')
@@ -9,26 +7,26 @@ var headerTitle = document.createElement('h1')
 var sideBar = document.createElement('div')
 var middleBar = document.createElement('div')
 var container = document.createElement('div')
-var taskContainer = document.createElement('div')
-var addTaskP = document.createElement('span')
 var inbox = document.createElement('div')
 var inboxP = document.createElement('p')
 var today = document.createElement('div')
 var todayP = document.createElement('p')
 var project = document.createElement('div')
 var projectP = document.createElement('p')
-var addTask = document.createElement('div')
-var spanAdd = document.createElement('div')
-var listContainer = document.createElement('div')
-var ul = document.createElement('ul')
-var taskX = document.querySelector('.delete-task1')
+
+
+var listContainerInbox = document.createElement('div')
+var listContainerProject = document.createElement('div')
+var listContainerToday = document.createElement('div')
+
+
+
 
 // class-add //
-ul.classList.add('ul-list')
-spanAdd.classList.add('add')
-addTask.classList.add('add-task')
-listContainer.classList.add('list-container')
-taskContainer.classList.add('task-container')
+
+
+listContainerInbox.classList.add('hidden')
+listContainerProject.classList.add('hidden')
 inbox.classList.add('inbox')
 today.classList.add('today')
 project.classList.add('project')
@@ -42,32 +40,181 @@ headerTitle.textContent = 'To-Do List ✅'
 inboxP.textContent = 'Inbox'
 todayP.textContent = 'Today'
 projectP.textContent = 'Projects'
-spanAdd.textContent = '+'
-addTaskP.textContent = 'Add Task'
+
+function createInboxContent() {
+    var ul_inbox = document.createElement('ul')
+    var div = document.createElement('div')
+    var label1 = document.createElement('label')
+    var input1 = document.createElement('input')
+    var div1 = document.createElement('div')
+    var label2 = document.createElement('label')
+    var input2 = document.createElement('input')
+    var submitB = document.createElement('button')
+    var h3 = document.createElement('h3')
+    h3.classList.add('inboxTitle')
+    var divContainer = document.createElement('div')
+    input1.setAttribute('name', 'title')
+    input1.id = 'title-inbox'
+    input1.setAttribute('type','text')
+    input1.setAttribute('placeholder','Title here')
+    input2.setAttribute('name', 'desc')
+    input2.setAttribute('type','text')
+    input2.setAttribute('placeholder','Desc here')
+    input2.id = 'desc-inbox'
+    h3.textContent = 'Inbox'
+    ul_inbox.classList.add('ul-list-inbox')
+    divContainer.classList.add('form-container')
+    submitB.setAttribute('type','button')
+    submitB.setAttribute('value','Submit')
+    submitB.textContent = '+'
+    
+    submitB.addEventListener('click', () => {
+        if (input1.value.length == 20 || input2.value.length == 0) {
+            alert('Description cannot be empty!')
+        } else {
+            let todoInfo = {
+                title:document.getElementById('title-inbox').value,
+                description:document.getElementById('desc-inbox').value
+            }
+        
+        
+            var h3 = document.createElement('h3')
+            var li = document.createElement('li')
+            var ul = document.querySelector('.ul-list-inbox')
+            var div = document.createElement('div')
+            var x = document.createElement('div')
+            x.classList.add('delete-task')
+            div.classList.add('list-border')
+        
+            h3.textContent = `${todoInfo.title}`
+            x.textContent ='✖'
+            li.textContent = `${todoInfo.description} `
+            li.style.textAlign = 'center'
+            h3.style.textAlign ='center'
+                div.addEventListener('click', ()=>{
+                    div.style.textDecoration = 'line-through'
+            })
+            x.addEventListener('click', () => {
+                div.remove();
+            })
+        
+            ul.appendChild(div)
+            div.append(x)
+            div.appendChild(h3)
+            div.appendChild(li)
+        }
+    })
+    listContainerInbox.appendChild(h3)
+    listContainerInbox.appendChild(ul_inbox)
+    listContainerInbox.appendChild(divContainer)
+    // listContainerInbox.appendChild(h3)
+    divContainer.appendChild(div)
+    div.appendChild(label1)
+    div.appendChild(input1)
+    divContainer.appendChild(div1)
+    div1.appendChild(label2)
+    div1.appendChild(input2)
+    divContainer.appendChild(submitB)
+    return ul_inbox;
+}
+
+function createProjectContent() {
+    var ul_project = document.createElement('ul')
+    var div = document.createElement('div')
+    var label1 = document.createElement('label')
+    var input1 = document.createElement('input')
+    var div1 = document.createElement('div')
+    var label2 = document.createElement('label')
+    var input2 = document.createElement('input')
+    var submitB = document.createElement('button')
+    var h3 = document.createElement('h3')
+    h3.classList.add('project-title')
+    var divContainer = document.createElement('div')
+    
+    input1.setAttribute('name', 'title')
+    input1.id = 'title-project'
+    input1.setAttribute('type','text')
+    input1.setAttribute('placeholder','Title here')
+    input2.setAttribute('name', 'desc')
+    input2.setAttribute('type','text')
+    input2.setAttribute('placeholder','Desc here')
+    input2.id = 'desc-project'
+    h3.textContent = 'Projects'
+    ul_project.classList.add('ul-list-project')
+    divContainer.classList.add('form-container')
+    submitB.setAttribute('type','button')
+    submitB.setAttribute('value','Submit')
+    submitB.textContent = '+'
+    
+    submitB.addEventListener('click', () => {
+        if (input1.value.length == 0 || input2.value.length == 0) {
+            alert('Fields cannot be empty!')
+        } else {
+            let todoInfo = {
+                title:document.getElementById('title-project').value,
+                description:document.getElementById('desc-project').value
+            }
+            var h3 = document.createElement('h3')
+            var li = document.createElement('li')
+            var ul = document.querySelector('.ul-list-project')
+            var div = document.createElement('div')
+            var x = document.createElement('div')
+            x.classList.add('delete-task')
+            div.classList.add('list-border')
+            h3.textContent = `${todoInfo.title}`
+            x.textContent ='✖'
+            li.textContent = `${todoInfo.description} `
+            li.style.textAlign = 'center'
+            h3.style.textAlign ='center'
+                div.addEventListener('click', ()=>{
+                    div.style.textDecoration = 'line-through'
+            })
+            x.addEventListener('click', () => {
+                div.remove();
+            })
+        
+            ul.appendChild(div)
+            div.append(x)
+            div.appendChild(h3)
+            div.appendChild(li)
+        }
+    })
+
+    listContainerProject.appendChild(ul_project)
+    listContainerProject.appendChild(h3)
+    listContainerProject.appendChild(divContainer)
+    // ul_project.appendChild(divContainer)
+    divContainer.appendChild(div)
+    div.appendChild(label1)
+    div.appendChild(input1)
+    divContainer.appendChild(div1)
+    div1.appendChild(label2)
+    div1.appendChild(input2)
+    divContainer.appendChild(submitB)
+    return ul_project;
+}
 
 // event Listeners //
-addTask.addEventListener('click', ()=> {
-    var form = document.getElementById('myForm') 
-    form.style.display = 'flex'
-})
-taskX.addEventListener('click' , () => {
-    var form = document.getElementById('myForm')
-    form.style.display = 'none'
-})
-
-// Submit button form //
-var button = document.querySelector('.submit-btn')
-button.addEventListener('click', ()=>{
-    addList();
-})
 
 project.addEventListener('click', () => {
-listContainer.style.display = 'none'
+let projectContainer = document.querySelector('.list-container-project')
+let inbox = document.querySelector('.list-container-inbox')
+let today = document.querySelector('.ul-list-today')
+listContainerProject.className = 'list-container-project'
+listContainerInbox.className = 'hidden'
+})
+
+inbox.addEventListener('click', () => {
+    let inboxContainer = document.querySelector('.list-container-inbox')
+    let today = document.querySelector('.ul-list-today')
+    listContainerProject.className = 'hidden'
+    listContainerInbox.className ='list-container-inbox'
 })
 
 main.append(header)
 main.append(container)
-listContainer.appendChild(ul)
+listContainerProject.appendChild(createProjectContent())
+listContainerInbox.appendChild(createInboxContent())
 container.append(sideBar)
 sideBar.appendChild(inbox)
 inbox.appendChild(inboxP)
@@ -76,9 +223,6 @@ today.appendChild(todayP)
 sideBar.appendChild(project)
 project.appendChild(projectP)
 container.append(middleBar)
-middleBar.appendChild(taskContainer)
-middleBar.append(listContainer)
-taskContainer.appendChild(addTask)
-addTask.appendChild(spanAdd)
-spanAdd.appendChild(addTaskP)
+middleBar.append(listContainerInbox)
+middleBar.appendChild(listContainerProject)
 header.appendChild(headerTitle)

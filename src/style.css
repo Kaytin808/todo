@@ -34,7 +34,7 @@ body {
     padding: 13px;
     display: none;
 }
-#task, #description {
+#title-inbox, #desc-inbox,#title-project, #desc-project {
     background-color: #202020;
     color: white;
     border: none;
@@ -53,31 +53,69 @@ body {
     margin-left: 10px;
     margin-top: 8px;
 }
-.list-container {
+.list-container-inbox, .list-container-project {
     height: 400px;
     width: 400px;
     position: absolute;
-    right: 35em;
+    right: 68em;
     color: white;
     font-family: sans;
     margin-top: 25px;
+
   }
+
 ul {
     list-style-type: none;
 }
-.ul-list {
-    flex-direction: column;
-    display: grid;
-    gap: 40px;
-    width: 32rem;
-    grid-template-columns: repeat(2,1fr);
+.ul-list-inbox {
+    display: flex;
+    /* grid-template-columns: repeat(2,1fr); */
     font-family: poppins;
+    position: relative;
+    left: 30em;
+    bottom: 8em;
+    height: fit-content;
+    width: fit-content;
+    /* border: 1px solid gray; */
+    flex-direction: column;
+}
+.inboxTitle, .project-title {
+    margin-top:5px;
+    border-bottom: 1px dashed #cccbcb;
+    width: fit-content;
+}
+button {
+    width: 268px;
+    background: transparent;
+    font-size: 28px;
+    border: 1px #9f9f9f solid;
+    border-radius: 2px;
+    color: white;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.ul-list-project button, .ul-list-inbox button {
+    width: fit-content;
+}
+.form-container { 
+    margin-top: 23px
+}
+.ul-list-project {
+    display: none;
+}
+.hidden {
+    display: none;
 }
 .list-border {
     border: solid grey 1px;
-    border-radius: 10px;
     cursor: pointer;
     background-color: #202020;
+    height: fit-content;
+    width: 47em;
+    font-size: 17px;
+}
+.list-border h3{
+    text-align: center;
 }
 .delete-task {
     float: right;
