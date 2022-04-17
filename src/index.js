@@ -44,7 +44,6 @@ projectP.textContent = 'Projects'
 function createInboxContent() {
     var ul_inbox = document.createElement('ul')
     var div = document.createElement('div')
-    var label1 = document.createElement('label')
     var input1 = document.createElement('input')
     var div1 = document.createElement('div')
     var label2 = document.createElement('label')
@@ -52,7 +51,7 @@ function createInboxContent() {
     var submitB = document.createElement('button')
     var h3 = document.createElement('h3')
     h3.classList.add('inboxTitle')
-    var divContainer = document.createElement('div')
+    var divContainer = document.createElement('form')
     input1.setAttribute('name', 'title')
     input1.id = 'title-inbox'
     input1.setAttribute('type','text')
@@ -77,7 +76,6 @@ function createInboxContent() {
                 description:document.getElementById('desc-inbox').value
             }
         
-        
             var h3 = document.createElement('h3')
             var li = document.createElement('li')
             var ul = document.querySelector('.ul-list-inbox')
@@ -97,11 +95,13 @@ function createInboxContent() {
             x.addEventListener('click', () => {
                 div.remove();
             })
-        
+           
             ul.appendChild(div)
             div.append(x)
             div.appendChild(h3)
             div.appendChild(li)
+            document.getElementById('title-inbox').value = ''
+            document.getElementById('desc-inbox').value = ''
         }
     })
     listContainerInbox.appendChild(h3)
@@ -109,10 +109,8 @@ function createInboxContent() {
     listContainerInbox.appendChild(divContainer)
     // listContainerInbox.appendChild(h3)
     divContainer.appendChild(div)
-    div.appendChild(label1)
     div.appendChild(input1)
     divContainer.appendChild(div1)
-    div1.appendChild(label2)
     div1.appendChild(input2)
     divContainer.appendChild(submitB)
     return ul_inbox;
@@ -177,6 +175,8 @@ function createProjectContent() {
             div.append(x)
             div.appendChild(h3)
             div.appendChild(li)
+            document.getElementById('title-inbox').value = ''
+            document.getElementById('desc-inbox').value = ''
         }
     })
 

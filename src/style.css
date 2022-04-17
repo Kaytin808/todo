@@ -67,7 +67,7 @@ body {
 ul {
     list-style-type: none;
 }
-.ul-list-inbox {
+.ul-list-inbox, .ul-list-project {
     display: flex;
     /* grid-template-columns: repeat(2,1fr); */
     font-family: poppins;
@@ -100,9 +100,7 @@ button {
 .form-container { 
     margin-top: 23px
 }
-.ul-list-project {
-    display: none;
-}
+
 .hidden {
     display: none;
 }
@@ -116,6 +114,7 @@ button {
 }
 .list-border h3{
     text-align: center;
+    border-bottom: 1px dashed grey;
 }
 .delete-task {
     float: right;
