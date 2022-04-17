@@ -109,12 +109,19 @@ button {
     cursor: pointer;
     background-color: #202020;
     height: fit-content;
-    width: 47em;
+    width: 40em;
     font-size: 17px;
 }
 .list-border h3{
     text-align: center;
     border-bottom: 1px dashed grey;
+}
+.list-border li p {
+    float: right;
+    margin-right: 15px;
+}
+.list-border li {
+    margin-left: 65px;
 }
 #date {
     width: 264px;

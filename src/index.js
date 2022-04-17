@@ -49,10 +49,12 @@ function createInboxContent() {
     var submitB = document.createElement('button')
     var h3 = document.createElement('h3')
     var dateInput = document.createElement('input')
+    var today = new Date();
+    var dateNow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); 
     dateInput.type = 'date'
     dateInput.id = 'date'
-    // dateInput.setAttribute('value', '2022-04-17')
-    // dateInput.setAttribute('min', '2022-04-16')
+    dateInput.setAttribute('value', dateNow)
+    // dateInput.setAttribute('min', today)
     // dateInput.setAttribute('max', '2023-04-16')
     h3.classList.add('inboxTitle')
     var divContainer = document.createElement('form')
@@ -76,11 +78,13 @@ function createInboxContent() {
         } else {
             let todoInfo = {
                 title:document.getElementById('title-inbox').value,
-                description:document.getElementById('desc-inbox').value
+                description:document.getElementById('desc-inbox').value,
+                date:document.getElementById('date').value
             }
-        
+
             var h3 = document.createElement('h3')
             var li = document.createElement('li')
+            var mkDate = document.createElement('p')
             var ul = document.querySelector('.ul-list-inbox')
             var div = document.createElement('div')
             var x = document.createElement('div')
@@ -88,8 +92,12 @@ function createInboxContent() {
             div.classList.add('list-border')
         
             h3.textContent = `${todoInfo.title}`
+            if (`${todoInfo.title}`== '') {
+        
+            }
             x.textContent ='✖'
             li.textContent = `${todoInfo.description} `
+            mkDate.textContent = `${todoInfo.date}`
             li.style.textAlign = 'center'
             h3.style.textAlign ='center'
                 div.addEventListener('click', ()=>{
@@ -103,8 +111,13 @@ function createInboxContent() {
             div.append(x)
             div.appendChild(h3)
             div.appendChild(li)
+            li.appendChild(mkDate)
             document.getElementById('title-inbox').value = ''
             document.getElementById('desc-inbox').value = ''
+            h3.textContent = `${todoInfo.title}`
+            if (`${todoInfo.title}`== '') {
+        h3.remove()
+            }
         }
     })
     listContainerInbox.appendChild(h3)
@@ -133,8 +146,11 @@ function createProjectContent() {
     var h3 = document.createElement('h3')
     var div2 = document.createElement('div')
     var dateInput = document.createElement('input')
+    var today = new Date();
+    var dateNow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); 
     dateInput.type = 'date'
     dateInput.id = 'date'
+    dateInput.setAttribute('value', dateNow)
     // dateInput.setAttribute('value', '2022-04-17')
     // dateInput.setAttribute('min', '2022-04-16')
     // dateInput.setAttribute('max', '2023-04-16')
