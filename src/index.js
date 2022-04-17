@@ -13,8 +13,6 @@ var today = document.createElement('div')
 var todayP = document.createElement('p')
 var project = document.createElement('div')
 var projectP = document.createElement('p')
-
-
 var listContainerInbox = document.createElement('div')
 var listContainerProject = document.createElement('div')
 var listContainerToday = document.createElement('div')
@@ -46,10 +44,16 @@ function createInboxContent() {
     var div = document.createElement('div')
     var input1 = document.createElement('input')
     var div1 = document.createElement('div')
-    var label2 = document.createElement('label')
+    var div2 = document.createElement('div')
     var input2 = document.createElement('input')
     var submitB = document.createElement('button')
     var h3 = document.createElement('h3')
+    var dateInput = document.createElement('input')
+    dateInput.type = 'date'
+    dateInput.id = 'date'
+    // dateInput.setAttribute('value', '2022-04-17')
+    // dateInput.setAttribute('min', '2022-04-16')
+    // dateInput.setAttribute('max', '2023-04-16')
     h3.classList.add('inboxTitle')
     var divContainer = document.createElement('form')
     input1.setAttribute('name', 'title')
@@ -66,7 +70,6 @@ function createInboxContent() {
     submitB.setAttribute('type','button')
     submitB.setAttribute('value','Submit')
     submitB.textContent = '+'
-    
     submitB.addEventListener('click', () => {
         if (input1.value.length == 20 || input2.value.length == 0) {
             alert('Description cannot be empty!')
@@ -111,7 +114,9 @@ function createInboxContent() {
     divContainer.appendChild(div)
     div.appendChild(input1)
     divContainer.appendChild(div1)
+    divContainer.appendChild(div2)
     div1.appendChild(input2)
+    div2.appendChild(dateInput)
     divContainer.appendChild(submitB)
     return ul_inbox;
 }
@@ -126,8 +131,15 @@ function createProjectContent() {
     var input2 = document.createElement('input')
     var submitB = document.createElement('button')
     var h3 = document.createElement('h3')
+    var div2 = document.createElement('div')
+    var dateInput = document.createElement('input')
+    dateInput.type = 'date'
+    dateInput.id = 'date'
+    // dateInput.setAttribute('value', '2022-04-17')
+    // dateInput.setAttribute('min', '2022-04-16')
+    // dateInput.setAttribute('max', '2023-04-16')
     h3.classList.add('project-title')
-    var divContainer = document.createElement('div')
+    var divContainer = document.createElement('form')
     
     input1.setAttribute('name', 'title')
     input1.id = 'title-project'
@@ -145,7 +157,7 @@ function createProjectContent() {
     submitB.textContent = '+'
     
     submitB.addEventListener('click', () => {
-        if (input1.value.length == 0 || input2.value.length == 0) {
+        if (input1.value.length == 20 || input2.value.length == 0) {
             alert('Fields cannot be empty!')
         } else {
             let todoInfo = {
@@ -175,8 +187,8 @@ function createProjectContent() {
             div.append(x)
             div.appendChild(h3)
             div.appendChild(li)
-            document.getElementById('title-inbox').value = ''
-            document.getElementById('desc-inbox').value = ''
+            document.getElementById('title-project').value = ''
+            document.getElementById('desc-project').value = ''
         }
     })
 
@@ -188,8 +200,10 @@ function createProjectContent() {
     div.appendChild(label1)
     div.appendChild(input1)
     divContainer.appendChild(div1)
+    divContainer.appendChild(div2)
     div1.appendChild(label2)
     div1.appendChild(input2)
+    div2.appendChild(dateInput)
     divContainer.appendChild(submitB)
     return ul_project;
 }

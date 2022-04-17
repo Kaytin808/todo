@@ -116,6 +116,17 @@ button {
     text-align: center;
     border-bottom: 1px dashed grey;
 }
+#date {
+    width: 264px;
+    text-align: center;
+    background: #202020;
+    color: white;
+    border: 1px solid;
+    margin-top: 5px;
+}
+#date:focus {
+    outline: 0;
+}
 .delete-task {
     float: right;
     font-size: 20px;

@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "dependencies": {
+    "animate.css": "^4.1.1",
     "webpack": "^5.70.0"
   },
   "devDependencies": {
