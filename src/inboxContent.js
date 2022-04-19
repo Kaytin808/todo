@@ -1,45 +1,3 @@
-// import addList from './addList';
-import './style.css'
-
-var main = document.getElementById('main')
-var header = document.createElement('div')
-var headerTitle = document.createElement('h1')
-var sideBar = document.createElement('div')
-var middleBar = document.createElement('div')
-var container = document.createElement('div')
-var inbox = document.createElement('div')
-var inboxP = document.createElement('p')
-var today = document.createElement('div')
-var todayP = document.createElement('p')
-var project = document.createElement('div')
-var projectP = document.createElement('p')
-var listContainerInbox = document.createElement('div')
-var listContainerProject = document.createElement('div')
-var listContainerToday = document.createElement('div')
-
-
-
-
-// class-add //
-
-
-listContainerInbox.classList.add('hidden')
-listContainerProject.classList.add('hidden')
-listContainerToday.classList.add('hidden')
-inbox.classList.add('inbox')
-today.classList.add('today')
-project.classList.add('project')
-container.classList.add('container')
-middleBar.classList.add('middle-container')
-sideBar.classList.add('sideBar-container')
-header.classList.add('header')
-
-// text-content //
-headerTitle.textContent = 'To-Do List ✅'
-inboxP.textContent = 'Inbox'
-todayP.textContent = 'Today'
-projectP.textContent = 'Projects'
-
 function createInboxContent() {
     var ul_inbox = document.createElement('ul')
     var div = document.createElement('div')
@@ -51,7 +9,9 @@ function createInboxContent() {
     var h3 = document.createElement('h3')
     var dateInput = document.createElement('input')
     var today = new Date();
-    var dateNow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); 
+    var dateNow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
+    var listContainerInbox = document.createElement('div')
+    listContainerInbox.classList.add('hidden')
     dateInput.type = 'date'
     dateInput.id = 'date'
     dateInput.setAttribute('value', dateNow)
@@ -89,6 +49,7 @@ function createInboxContent() {
             var ul = document.querySelector('.ul-list-inbox')
             var div = document.createElement('div')
             var x = document.createElement('div')
+            
             x.classList.add('delete-task')
             div.classList.add('list-border')
         
@@ -134,60 +95,4 @@ function createInboxContent() {
     divContainer.appendChild(submitB)
     return ul_inbox;
 }
-
-function createProjectContent() {
-let projectName = prompt('What is the name of your project?')
-var h3 = document.createElement('h3')
-var newTab = document.createElement('div')
-// var newTabP = document.createElement('div')
-// newTabP.textContent = projectName
-newTab.textContent = projectName;
-// h3.textContent = projectName;
-sideBar.appendChild(newTab)
-// newTab.appendChild(newTabP)
-}
-function createTodayContent() {
-    var todayTitle = document.createElement('h3')
-    todayTitle.textContent = 'Today'
-    todayTitle.classList.add('today-title')
-    listContainerToday.appendChild(todayTitle)
-    return todayTitle
-}
-// event Listeners //
-
-project.addEventListener('click', () => {
-listContainerProject.className = 'list-container-project'
-listContainerInbox.className = 'hidden'
-listContainerToday.className = 'hidden'
-createProjectContent()
-})
-
-inbox.addEventListener('click', () => {
-    listContainerProject.className = 'hidden'
-    listContainerInbox.className ='list-container-inbox'
-    listContainerToday.className = 'hidden'
-})
-
-today.addEventListener('click', () => {
-    listContainerInbox.className = 'hidden'
-    listContainerProject.className = 'hidden'
-    listContainerToday.className = 'list-container-today'
-})
-
-main.append(header)
-main.append(container)
-container.append(sideBar)
-sideBar.appendChild(inbox)
-inbox.appendChild(inboxP)
-sideBar.appendChild(today)
-today.appendChild(todayP)
-sideBar.appendChild(project)
-project.appendChild(projectP)
-container.append(middleBar)
-middleBar.append(listContainerInbox)
-middleBar.appendChild(listContainerProject)
-middleBar.appendChild(listContainerToday)
-// listContainerProject.appendChild(createProjectContent())
-listContainerInbox.appendChild(createInboxContent())
-listContainerToday.appendChild(createTodayContent())
-header.appendChild(headerTitle)
+export default createInboxContent;

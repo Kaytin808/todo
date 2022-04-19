@@ -84,6 +84,15 @@ ul {
     border-bottom: 1px dashed #cccbcb;
     width: fit-content;
 }
+.today-title {
+    position: relative;
+    left: 84px;
+    top: 25px;
+    color: white;
+    border-bottom: 1px dashed #cccbcb;
+    width: fit-content;
+    margin-top:5px;
+}
 button {
     width: 268px;
     background: transparent;
