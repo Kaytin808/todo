@@ -1,51 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Todo</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="main">
-        <div class="header"><h1>To-Do List ✅</h1></div>
-        <div class="container">
-            <div class="sideBar-container">
-                <button class="tabs_buttons" data-for-tab="inbox"><p>Inbox</p></button>
-                <button class="tabs_buttons" data-for-tab="today"><p>Today</p></button>
-                <div class="add-expand">
-
-                <div class="tabs_proj" data-for-tab="project"><p class="absoluteP">Projects</p><span class="plus">+</span></div>
-
-                <div class="subnav">
-                <button class="tabs_buttons" data-for-tab="default-project">Default Project</button>
-                </div>
-                </div>
+      <div class="header"><h1>To-Do List ✅</h1></div>
+      <div class="container">
+        <div class="sideBar-container">
+          <button class="tabs_buttons" data-for-tab="inbox">
+            <p>Inbox</p>
+          </button>
+          <button class="tabs_buttons" data-for-tab="today">
+            <p>Today</p>
+          </button>
+          <div class="add-expand">
+            <div class="tabs_proj" data-for-tab="project">
+              <p class="absoluteP">Projects</p>
+              <span class="plus">+</span>
             </div>
-            <div class="middle-container">
-                <div class="tabs_content" data-tab="inbox">
-                    <h3 class="inboxTitle">Inbox</h3>
-                    <div class="form-container">
-                    <div>
-                        <input name="title" type="text" id="title-inbox" placeholder="Title here..">
-                    </div>
-                    <div>
-                        <input name="description" type="text" id="desc-inbox" placeholder="Description here..">
-                    </div>
-                    <div>
-                        <input type="date" id="date-inbox" >
-                    </div>
-                    <button type="submit"  value="Submit" class="submit-inbox-button">+</button>
-                    </div>
-                    <ul class="ul-list-inbox"></ul>
-                </div>
-                <div class="tabs_content" data-tab="today">
-                    this is the today!
-                </div>
-                <div class="tabs_content" data-tab="default-project"><h3>Default Project</h3></div>
+
+            <div class="subnav">
+              <button class="tabs_buttons" data-for-tab="default-project">
+                Default Project
+              </button>
             </div>
+          </div>
         </div>
+        <div class="middle-container">
+          <div class="tabs_content" data-tab="inbox">
+            <h3 class="inboxTitle">Inbox</h3>
+            <div class="form-container">
+              <div>
+                <input
+                  name="title"
+                  type="text"
+                  id="title-inbox"
+                  placeholder="Title here.."
+                />
+              </div>
+              <div>
+                <input
+                  name="description"
+                  type="text"
+                  id="desc-inbox"
+                  placeholder="Description here.."
+                />
+              </div>
+              <div>
+                <input type="date" id="date-inbox" />
+              </div>
+              <button type="submit" value="Submit" class="submit-inbox-button">
+                +
+              </button>
+            </div>
+            <ul class="ul-list-inbox"></ul>
+          </div>
+          <div class="tabs_content" data-tab="today">this is the today!</div>
+          <div class="tabs_content" data-tab="default-project">
+            <h3>Default Project</h3>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="main.js"></script>
-</body>
+  </body>
 </html>

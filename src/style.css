@@ -1,280 +1,299 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-    background-color: #D2F1E4;
+  background-color: #d2f1e4;
 }
 #main {
-    height: 48rem;
+  height: 48rem;
 }
 .header {
-    background-color: #272727;
-    height: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-color: #272727;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header h1 {
-    color: white;
-    font-family: poppins;
+  color: white;
+  font-family: poppins;
 }
 .container {
-    display: flex;
+  display: flex;
 }
 #myForm {
-    position: relative;
-    left: 396px;
-    top: -546px;
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    background-color: #202020;
-    border-radius: 12px;
-    padding: 13px;
-    display: none;
+  position: relative;
+  left: 396px;
+  top: -546px;
+  display: flex;
+  flex-direction: column;
+  width: 270px;
+  background-color: #202020;
+  border-radius: 12px;
+  padding: 13px;
+  display: none;
 }
-#title-inbox, #desc-inbox,#title-project, #desc-project {
-    background-color: #202020;
-    color: white;
-    border: none;
-    padding: 7px;
-    font-family: poppins;
-    font-size: 17px;
-    border-bottom: solid 1px #646464;
-    border-radius: 0px;
-    width: 254px;
-    outline: none;
-    margin-top: 9px;
+#title-inbox,
+#desc-inbox,
+#title-project,
+#desc-project {
+  background-color: #202020;
+  color: white;
+  border: none;
+  padding: 7px;
+  font-family: poppins;
+  font-size: 17px;
+  border-bottom: solid 1px #646464;
+  border-radius: 0px;
+  width: 254px;
+  outline: none;
+  margin-top: 9px;
 }
-.title-label, .desc-label {
-    font-style: poppins;
-    color: white;
-    margin-left: 10px;
-    margin-top: 8px;
+.title-label,
+.desc-label {
+  font-style: poppins;
+  color: white;
+  margin-left: 10px;
+  margin-top: 8px;
 }
-.tabs_content--active, .list-container-project {
-    height: 400px;
-    width: 400px;
-    position: absolute;
-    right: 68em;
-    color: white;
-    font-family: sans;
-    margin-top: 25px;
-
-  }
+.tabs_content--active,
+.list-container-project {
+  height: 400px;
+  width: 400px;
+  position: absolute;
+  right: 68em;
+  color: white;
+  font-family: sans;
+  margin-top: 25px;
+}
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
-.ul-list-inbox, .ul-list-project {
-    display: flex;
-    /* grid-template-columns: repeat(2,1fr); */
-    font-family: poppins;
-    position: relative;
-    left: 30em;
-    bottom: 8em;
-    height: fit-content;
-    width: fit-content;
-    /* border: 1px solid gray; */
-    flex-direction: column;
+.ul-list-inbox,
+.ul-list-project {
+  display: flex;
+  /* grid-template-columns: repeat(2,1fr); */
+  font-family: poppins;
+  position: relative;
+  left: 30em;
+  bottom: 8em;
+  height: fit-content;
+  width: fit-content;
+  /* border: 1px solid gray; */
+  flex-direction: column;
 }
-.inboxTitle, .project-title, .titleMiddleBar {
-    margin-top:5px;
-    border-bottom: 1px dashed #cccbcb;
-    width: fit-content;
-    font-family: poppins;
-    color: white;
+.inboxTitle,
+.project-title,
+.titleMiddleBar {
+  margin-top: 5px;
+  border-bottom: 1px dashed #cccbcb;
+  width: fit-content;
+  font-family: poppins;
+  color: white;
 }
 .today-title {
-    position: relative;
-    left: 84px;
-    top: 25px;
-    color: white;
-    border-bottom: 1px dashed #cccbcb;
-    width: fit-content;
-    margin-top:5px;
+  position: relative;
+  left: 84px;
+  top: 25px;
+  color: white;
+  border-bottom: 1px dashed #cccbcb;
+  width: fit-content;
+  margin-top: 5px;
 }
-.tabs_buttons, .add-expand, .tabs_proj {
-    width: inherit;
-    background: transparent;
-    font-size: 28px;
-    border-radius: 2px;
-    color: white;
-    border: none;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-    text-align: center;
-    flex-wrap: wrap;
-    gap: 10px;
+.tabs_buttons,
+.add-expand,
+.tabs_proj {
+  width: inherit;
+  background: transparent;
+  font-size: 28px;
+  border-radius: 2px;
+  color: white;
+  border: none;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-.tabs_project
-
-.default-project {
-    font-size: 19px;
+.tabs_project .default-project {
+  font-size: 19px;
 }
 .subnav {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.subnav button{
-    font-size: 17px;
+.subnav button {
+  font-size: 17px;
 }
-[data-for-tab = "project"] {
-    display: flex;
-    justify-content: center;
-    font-family: poppins;
-    height: 65px;
+[data-for-tab="project"] {
+  display: flex;
+  justify-content: center;
+  font-family: poppins;
+  height: 65px;
 }
 .absoluteP {
-    position: absolute;
+  position: absolute;
 }
 .plus {
-    position: relative;
-    left: 132px;
-    top: 23px;
-    height: 22px;
-    width: 23px;
-    justify-content: center;
-    align-items: center;
-    display: flex;
+  position: relative;
+  left: 132px;
+  top: 23px;
+  height: 22px;
+  width: 23px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .plus:hover {
-    border: 1px solid whitesmoke;
-    border-radius: 7px;
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
 }
 
 .tabs_content {
-    display: none;
+  display: none;
 }
-.tabs_content--active  {
-    display: block;
+.tabs_content--active {
+  display: block;
 }
-.ul-list-project button, .ul-list-inbox button {
-    width: fit-content;
+.ul-list-project button,
+.ul-list-inbox button {
+  width: fit-content;
 }
-.form-container { 
-    margin-top: 23px
+.form-container {
+  margin-top: 23px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 .list-border {
-    border: solid grey 1px;
-    cursor: pointer;
-    background-color: #202020;
-    height: fit-content;
-    width: 40em;
-    font-size: 17px;
+  border: solid grey 1px;
+  cursor: pointer;
+  background-color: #202020;
+  height: fit-content;
+  width: 40em;
+  font-size: 17px;
 }
-.list-border h3{
-    text-align: center;
-    border-bottom: 1px dashed grey;
+.list-border h3 {
+  text-align: center;
+  border-bottom: 1px dashed grey;
 }
 .list-border li p {
-    float: right;
-    margin-right: 15px;
+  float: right;
+  margin-right: 15px;
 }
 .list-border li {
-    margin-left: 65px;
+  margin-left: 65px;
 }
 #date-inbox {
-    width: 264px;
-    text-align: center;
-    background: #202020;
-    color: white;
-    border: 1px solid;
-    margin-top: 5px;
+  width: 264px;
+  text-align: center;
+  background: #202020;
+  color: white;
+  border: 1px solid;
+  margin-top: 5px;
 }
 #date-inbox:focus {
-    outline: 0;
+  outline: 0;
 }
 .delete-task {
-    float: right;
-    font-size: 20px;
-    margin-right: 4px;
+  float: right;
+  font-size: 20px;
+  margin-right: 4px;
 }
 .delete-task1 {
-    position: relative;
-    left: 250px;
-    top: -7px;
-    color: white;
-    font-size: 27px;
-    cursor: pointer;
+  position: relative;
+  left: 250px;
+  top: -7px;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
 }
 .submit-btn {
-    font-size: 30px;
-    border: medium none;
-    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-    border-radius: 22px;
-    position: relative;
-    top: 4px;
-    left: 5px;
+  font-size: 30px;
+  border: medium none;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+  border-radius: 22px;
+  position: relative;
+  top: 4px;
+  left: 5px;
 }
 .sideBar-container {
-    height: 56rem;
-    width: 21rem;
-    background-color: #565656;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  height: 56rem;
+  width: 21rem;
+  background-color: #565656;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .sideBar-container p {
-    font-size: 30px;
-    font-family: poppins;
-    color: white;
-    padding: 10px;
+  font-size: 30px;
+  font-family: poppins;
+  color: white;
+  padding: 10px;
 }
 
 .adder-btn button {
-    position: relative;
-    left: -25px;
-    top: 28px;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-size: 30px;
+  position: relative;
+  left: -25px;
+  top: 28px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
 }
 .adder-btn:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 .tabs_buttons:hover {
-    background-color: #6e6e6e;
-    border-radius: 10px;
-    cursor: pointer;
+  background-color: #6e6e6e;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .middle-container {
-    height: 56rem;
-    width: 99rem;
-    background-color: #2d2d2d;
+  height: 56rem;
+  width: 99rem;
+  background-color: #2d2d2d;
 }
 .create-project {
-    font-size: 20px;
+  font-size: 20px;
 }
 .create-project:hover {
-    cursor: pointer;
-    color: #b7adad;
+  cursor: pointer;
+  color: #b7adad;
 }
 .add-task {
-    font-size: 25px;
-    color: white;
-    font-family: poppins;
+  font-size: 25px;
+  color: white;
+  font-family: poppins;
 }
 .tabs_ {
-    display: flex;
-    margin-left: 60px;
-    margin-top: 18px;
+  display: flex;
+  margin-left: 60px;
+  margin-top: 18px;
 }
 .add span {
-    padding: 15px;
+  padding: 15px;
 }
 .add:hover {
-    color: grey;
-    cursor: pointer;
+  color: grey;
+  cursor: pointer;
+}
+.formSubmitBtn:hover {
+  cursor: pointer;
+}
+.formSubmitBtn {
+  width: 267px;
+  margin-top: 7px;
+  background-color: #202020;
+  color: white;
+  font-size: 20px;
+  border: 1px solid;
 }
 @font-face {
-    font-family: 'poppins';
-    src: url('./Poppins-Light.ttf');
+  font-family: "poppins";
+  src: url("./Poppins-Light.ttf");
 }
