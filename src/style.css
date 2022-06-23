@@ -36,8 +36,8 @@ body {
 }
 #title-inbox,
 #desc-inbox,
-#title-project,
-#desc-project {
+#title-form,
+#desc-form {
   background-color: #202020;
   color: white;
   border: none;
@@ -59,20 +59,19 @@ body {
 }
 .tabs_content--active,
 .list-container-project {
-  height: 400px;
-  width: 400px;
-  position: absolute;
-  right: 68em;
-  color: white;
-  font-family: sans;
-  margin-top: 25px;
+    height: 400px;
+    width: fit-content;
+    margin-left: 76px;
+    color: white;
+    font-family: sans;
+    margin-top: 25px;
 }
 
 ul {
   list-style-type: none;
 }
 .ul-list-inbox,
-.ul-list-project {
+.ul-list-project, .ul-form {
   display: flex;
   /* grid-template-columns: repeat(2,1fr); */
   font-family: poppins;
@@ -87,7 +86,7 @@ ul {
 .inboxTitle,
 .project-title,
 .titleMiddleBar {
-  margin-top: 5px;
+  margin-left: 108px;
   border-bottom: 1px dashed #cccbcb;
   width: fit-content;
   font-family: poppins;
@@ -162,9 +161,9 @@ ul {
 .ul-list-inbox button {
   width: fit-content;
 }
-.form-container {
+/* .form-container {
   margin-top: 23px;
-}
+} */
 
 .hidden {
   display: none;
@@ -174,7 +173,7 @@ ul {
   cursor: pointer;
   background-color: #202020;
   height: fit-content;
-  width: 40em;
+  width: 27em;
   font-size: 17px;
 }
 .list-border h3 {
@@ -182,13 +181,14 @@ ul {
   border-bottom: 1px dashed grey;
 }
 .list-border li p {
-  float: right;
-  margin-right: 15px;
-}
-.list-border li {
+    border-top: 1px dashed gray;
+    border-radius: 0px;
+    padding-top: 5px;
+ }
+/* .list-border li {
   margin-left: 65px;
-}
-#date-inbox {
+} */
+#date-inbox, #date-form {
   width: 264px;
   text-align: center;
   background: #202020;
@@ -196,8 +196,11 @@ ul {
   border: 1px solid;
   margin-top: 5px;
 }
-#date-inbox:focus {
+#date-inbox:focus, #date-form {
   outline: 0;
+}
+#date-form:hover{
+cursor: pointer;
 }
 .delete-task {
   float: right;
@@ -285,7 +288,7 @@ ul {
 .formSubmitBtn:hover {
   cursor: pointer;
 }
-.formSubmitBtn {
+.formSubmitBtn, .submit-inbox-button {
   width: 267px;
   margin-top: 7px;
   background-color: #202020;
