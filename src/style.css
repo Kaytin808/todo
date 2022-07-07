@@ -60,7 +60,7 @@ body {
 .tabs_content--active,
 .list-container-project {
     height: 400px;
-    width: fit-content;
+    width: 269px;
     margin-left: 76px;
     color: white;
     font-family: sans;
@@ -86,11 +86,13 @@ ul {
 .inboxTitle,
 .project-title,
 .titleMiddleBar {
-  margin-left: 108px;
-  border-bottom: 1px dashed #cccbcb;
-  width: fit-content;
-  font-family: poppins;
-  color: white;
+/* width: initial; */
+font-family: poppins;
+color: white;
+text-align: center;
+text-decoration: underline;
+  text-decoration-style: solid;
+text-decoration-style: dashed;
 }
 .today-title {
   position: relative;
@@ -123,10 +125,11 @@ ul {
 .subnav {
   display: flex;
   flex-direction: column;
+  width: inherit;
 }
 .subnav button {
   font-size: 17px;
-  display: inline-block;
+
 }
 [data-for-tab="project"] {
   display: flex;
@@ -254,7 +257,7 @@ cursor: pointer;
 }
 .tabs_buttons:hover {
   background-color: #6e6e6e;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   cursor: pointer;
 }
 .middle-container {
@@ -297,6 +300,7 @@ cursor: pointer;
   font-size: 20px;
   border: 1px solid;
 }
+
 @font-face {
   font-family: "poppins";
   src: url("./Poppins-Light.ttf");
