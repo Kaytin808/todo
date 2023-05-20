@@ -2,11 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: #d2f1e4;
 }
-
+#main {
+  height: 48rem;
+}
 .header {
   background-color: #272727;
   height: 130px;
@@ -14,36 +15,29 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .header h1 {
   color: white;
   font-family: poppins;
 }
-
 .container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
-
 #myForm {
   position: relative;
-  margin-top: 20px;
+  left: 396px;
+  top: -546px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  width: 270px;
   background-color: #202020;
   border-radius: 12px;
   padding: 13px;
   display: none;
 }
-
 #title-inbox,
 #desc-inbox,
 #title-form,
-#desc-form,
-#date-inbox,
-#date-form {
+#desc-form {
   background-color: #202020;
   color: white;
   border: none;
@@ -56,63 +50,63 @@ body {
   outline: none;
   margin-top: 9px;
 }
-
 .title-label,
 .desc-label {
-  font-family: poppins;
+  font-style: poppins;
   color: white;
   margin-left: 10px;
   margin-top: 8px;
 }
-
 .tabs_content--active,
 .list-container-project {
-  height: auto;
-  width: 100%;
-  color: white;
-  font-family: sans;
-  margin-top: 25px;
+    height: 400px;
+    width: 269px;
+    margin-left: 76px;
+    color: white;
+    font-family: sans;
+    margin-top: 25px;
 }
 
 ul {
   list-style-type: none;
 }
-
 .ul-list-inbox,
-.ul-list-project,
-.ul-form {
+.ul-list-project, .ul-form {
   display: flex;
-  flex-direction: column;
+  /* grid-template-columns: repeat(2,1fr); */
   font-family: poppins;
-  margin-top: 10px;
+  position: relative;
+  left: 30em;
+  bottom: 8em;
+  height: fit-content;
+  width: fit-content;
+  /* border: 1px solid gray; */
+  flex-direction: column;
 }
-
 .inboxTitle,
 .project-title,
 .titleMiddleBar {
-  font-family: poppins;
-  color: white;
-  text-align: center;
-  text-decoration: underline;
+/* width: initial; */
+font-family: poppins;
+color: white;
+text-align: center;
+text-decoration: underline;
   text-decoration-style: solid;
-  text-decoration-style: dashed;
+text-decoration-style: dashed;
 }
-
 .today-title {
+  position: relative;
+  left: 84px;
+  top: 25px;
   color: white;
   border-bottom: 1px dashed #cccbcb;
   width: fit-content;
-  margin: 5px auto;
+  margin-top: 5px;
 }
-
 .tabs_buttons,
 .add-expand,
-.tabs_proj,
-.tabs_project .default-project,
-.subnav button,
-.create-project,
-.add-task {
-  width: 100%;
+.tabs_proj {
+  width: inherit;
   background: transparent;
   font-size: 28px;
   border-radius: 2px;
@@ -125,11 +119,189 @@ ul {
   flex-wrap: wrap;
   gap: 10px;
 }
-
 .tabs_project .default-project {
   font-size: 19px;
 }
-
 .subnav {
   display: flex;
+  flex-direction: column;
+  width: inherit;
+}
+.subnav button {
+  font-size: 17px;
+
+}
+[data-for-tab="project"] {
+  display: flex;
+  justify-content: center;
+  font-family: poppins;
+  height: 65px;
+}
+.absoluteP {
+  position: absolute;
+}
+.plus {
+  position: relative;
+  left: 132px;
+  top: 23px;
+  height: 22px;
+  width: 23px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.plus:hover {
+  border: 1px solid whitesmoke;
+  border-radius: 7px;
+}
+
+.tabs_content {
+  display: none;
+}
+.tabs_content--active {
+  display: block;
+}
+.ul-list-project button,
+.ul-list-inbox button {
+  width: fit-content;
+}
+/* .form-container {
+  margin-top: 23px;
+} */
+
+.hidden {
+  display: none;
+}
+.list-border {
+  border: solid grey 1px;
+  cursor: pointer;
+  background-color: #202020;
+  height: fit-content;
+  width: 27em;
+  font-size: 17px;
+}
+.list-border h3 {
+  text-align: center;
+  border-bottom: 1px dashed grey;
+}
+.list-border li p {
+    border-top: 1px dashed gray;
+    border-radius: 0px;
+    padding-top: 5px;
  }
+/* .list-border li {
+  margin-left: 65px;
+} */
+#date-inbox, #date-form {
+  width: 264px;
+  text-align: center;
+  background: #202020;
+  color: white;
+  border: 1px solid;
+  margin-top: 5px;
+}
+#date-inbox:focus, #date-form {
+  outline: 0;
+}
+#date-form:hover{
+cursor: pointer;
+}
+.delete-task {
+  float: right;
+  font-size: 20px;
+  margin-right: 4px;
+}
+.delete-task1 {
+  position: relative;
+  left: 250px;
+  top: -7px;
+  color: white;
+  font-size: 27px;
+  cursor: pointer;
+}
+.submit-btn {
+  font-size: 30px;
+  border: medium none;
+  background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+  border-radius: 22px;
+  position: relative;
+  top: 4px;
+  left: 5px;
+}
+.sideBar-container {
+  height: 56rem;
+  width: 21rem;
+  background-color: #565656;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.sideBar-container p {
+  font-size: 30px;
+  font-family: poppins;
+  color: white;
+  padding: 10px;
+}
+
+.adder-btn button {
+  position: relative;
+  left: -25px;
+  top: 28px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 30px;
+}
+.adder-btn:hover {
+  cursor: pointer;
+}
+.tabs_buttons:hover {
+  background-color: #6e6e6e;
+  /* border-radius: 10px; */
+  cursor: pointer;
+}
+.middle-container {
+  height: 56rem;
+  width: 99rem;
+  background-color: #2d2d2d;
+}
+.create-project {
+  font-size: 20px;
+}
+.create-project:hover {
+  cursor: pointer;
+  color: #b7adad;
+}
+.add-task {
+  font-size: 25px;
+  color: white;
+  font-family: poppins;
+}
+.tabs_ {
+  display: flex;
+  margin-left: 60px;
+  margin-top: 18px;
+}
+.add span {
+  padding: 15px;
+}
+.add:hover {
+  color: grey;
+  cursor: pointer;
+}
+.formSubmitBtn:hover {
+  cursor: pointer;
+}
+.formSubmitBtn, .submit-inbox-button {
+  width: 267px;
+  margin-top: 7px;
+  background-color: #202020;
+  color: white;
+  font-size: 20px;
+  border: 1px solid;
+}
+
+@font-face {
+  font-family: "poppins";
+  src: url("./Poppins-Light.ttf");
+}
