@@ -43,4 +43,13 @@ export default function createList() {
   if (`${todoInfo.title}` == "") {
     h3.remove();
   }
+
+  // Retrieve existing todos from local storage or initialize an empty array
+  let existingTodos = JSON.parse(localStorage.getItem('todos')) || [];
+
+  // Add the new todoInfo to the existing array
+  existingTodos.push(todoInfo);
+
+  // Store the updated array back to local storage
+  localStorage.setItem('todos', JSON.stringify(existingTodos));
 }
